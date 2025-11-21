@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Printelligence | Premium Luxury Printing & Design</title>
-    <meta name="description" content="World's most premium printing service. Luxury business cards, invitations, marketing materials with exquisite craftsmanship.">
+    <title>Printelligence | World's Most Premium Luxury Printing Service</title>
+    <meta name="description" content="Experience the pinnacle of luxury printing. Premium business cards, invitations, marketing materials with exquisite craftsmanship and white-glove service.">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
@@ -291,6 +291,37 @@
             top: 40%;
             left: 85%;
             animation-delay: 4s;
+        }
+
+        /* Statistics Section */
+        .stats-section {
+            padding: 4rem 0;
+            background: var(--deep-blue);
+            color: var(--text-light);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .stat-item {
+            padding: 2rem;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--gold);
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .stat-label {
+            color: var(--silver);
+            font-size: 1.1rem;
         }
 
         /* Premium Experience Section */
@@ -585,178 +616,102 @@
             font-size: 1.3rem;
         }
 
-        /* Pricing Tiers */
-        .pricing-tiers {
+        /* Gallery Section */
+        .gallery-section {
             padding: 6rem 0;
             background: linear-gradient(to bottom, #ffffff 0%, var(--light-silver) 100%);
         }
 
-        .pricing-grid {
+        .gallery-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2.5rem;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
         }
 
-        .pricing-card {
-            background: white;
-            border-radius: 15px;
-            padding: 3rem 2.5rem;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        .gallery-item {
+            border-radius: 10px;
+            overflow: hidden;
+            height: 300px;
+            background-size: cover;
+            background-position: center;
             transition: var(--transition);
-            text-align: center;
             position: relative;
-            border: 1px solid rgba(0, 0, 0, 0.05);
         }
 
-        .pricing-card.featured {
-            transform: scale(1.05);
-            border-top: 4px solid var(--gold);
-            z-index: 1;
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        .gallery-item:hover {
+            transform: scale(1.03);
         }
 
-        .pricing-card:hover {
-            transform: translateY(-15px);
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(10, 26, 53, 0.8));
+            color: white;
+            padding: 2rem 1.5rem 1.5rem;
+            transform: translateY(100%);
+            transition: var(--transition);
         }
 
-        .pricing-card.featured:hover {
-            transform: scale(1.05) translateY(-15px);
+        .gallery-item:hover .gallery-overlay {
+            transform: translateY(0);
         }
 
-        .pricing-header {
-            margin-bottom: 2.5rem;
-        }
-
-        .pricing-name {
-            font-size: 1.6rem;
-            color: var(--deep-blue);
-            margin-bottom: 0.8rem;
-        }
-
-        .pricing-price {
-            font-size: 3rem;
-            font-weight: 700;
-            color: var(--deep-blue);
-            margin-bottom: 0.5rem;
-        }
-
-        .pricing-desc {
-            color: var(--medium-blue);
-            font-size: 1rem;
-        }
-
-        .pricing-features {
-            list-style: none;
-            margin-bottom: 2.5rem;
-            text-align: left;
-        }
-
-        .pricing-features li {
-            margin-bottom: 1rem;
-            display: flex;
-            align-items: center;
-        }
-
-        .pricing-features li i {
-            color: var(--gold);
-            margin-right: 12px;
-            font-size: 1.1rem;
-        }
-
-        /* Design Studio */
-        .design-studio {
+        /* Process Section */
+        .process-section {
             padding: 6rem 0;
-            background: linear-gradient(135deg, var(--deep-blue) 0%, var(--medium-blue) 100%);
+            background: var(--deep-blue);
             color: var(--text-light);
         }
 
-        .studio-container {
-            display: grid;
-            grid-template-columns: 320px 1fr;
-            gap: 3rem;
-        }
-
-        .studio-toolbar {
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 15px;
-            padding: 2rem;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .toolbar-section {
-            margin-bottom: 2.5rem;
-        }
-
-        .toolbar-section h3 {
-            color: var(--silver);
-            margin-bottom: 1.2rem;
-            font-size: 1.2rem;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-            padding-bottom: 0.5rem;
-        }
-
-        .tool-option {
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 8px;
-            padding: 1rem;
-            margin-bottom: 0.8rem;
-            cursor: pointer;
-            transition: var(--transition);
+        .process-steps {
             display: flex;
-            align-items: center;
-            gap: 10px;
+            justify-content: space-between;
+            position: relative;
+            margin-top: 3rem;
         }
 
-        .tool-option:hover {
-            background: rgba(255, 255, 255, 0.1);
-            transform: translateX(5px);
+        .process-steps::before {
+            content: '';
+            position: absolute;
+            top: 40px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: var(--silver);
+            opacity: 0.3;
         }
 
-        .studio-preview {
-            background: white;
-            border-radius: 15px;
-            min-height: 600px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            color: var(--text-dark);
-            padding: 2.5rem;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        .process-step {
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            flex: 1;
+            padding: 0 1rem;
         }
 
-        .preview-area {
-            width: 100%;
-            height: 450px;
-            border: 2px dashed var(--accent-silver);
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 2.5rem;
-            background: var(--light-silver);
-        }
-
-        .ai-assist {
-            background: linear-gradient(to right, var(--silver) 0%, var(--accent-silver) 100%);
+        .step-number {
+            width: 80px;
+            height: 80px;
+            background: var(--gold);
             color: var(--deep-blue);
-            border: none;
-            padding: 1rem 2rem;
-            border-radius: 8px;
-            font-weight: 600;
-            cursor: pointer;
+            border-radius: 50%;
             display: flex;
             align-items: center;
-            gap: 12px;
-            margin: 0 auto;
-            transition: var(--transition);
-            font-size: 1.1rem;
+            justify-content: center;
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin: 0 auto 1.5rem;
         }
 
-        .ai-assist:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        .step-content h3 {
+            color: var(--silver);
+            margin-bottom: 1rem;
+        }
+
+        .step-content p {
+            color: var(--accent-silver);
         }
 
         /* Testimonials */
@@ -826,6 +781,28 @@
         .author-info p {
             color: var(--medium-blue);
             font-size: 0.9rem;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 6rem 0;
+            background: linear-gradient(135deg, var(--deep-blue) 0%, var(--medium-blue) 100%);
+            color: var(--text-light);
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: 2.8rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .cta-section p {
+            font-size: 1.2rem;
+            margin-bottom: 2.5rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            color: var(--silver);
         }
 
         /* Footer */
@@ -929,16 +906,13 @@
                 font-size: 3.2rem;
             }
             
-            .studio-container {
-                grid-template-columns: 1fr;
+            .process-steps {
+                flex-direction: column;
+                gap: 3rem;
             }
             
-            .pricing-card.featured {
-                transform: scale(1);
-            }
-            
-            .pricing-card.featured:hover {
-                transform: translateY(-15px);
+            .process-steps::before {
+                display: none;
             }
         }
 
@@ -968,16 +942,22 @@
                 align-items: center;
             }
 
-            .features-grid, .category-grid, .products-grid, .footer-grid, .testimonials-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .pricing-grid {
+            .features-grid, .category-grid, .products-grid, .footer-grid, .testimonials-grid, .gallery-grid {
                 grid-template-columns: 1fr;
             }
 
             .section-header h2 {
                 font-size: 2.5rem;
+            }
+            
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .stats-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -995,9 +975,9 @@
             <nav>
                 <ul>
                     <li><a href="#home">Home</a></li>
-                    <li><a href="#categories">Categories</a></li>
-                    <li><a href="#design-studio">Design Studio</a></li>
-                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="#categories">Collections</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#process">Process</a></li>
                     <li><a href="#testimonials">Testimonials</a></li>
                 </ul>
             </nav>
@@ -1021,13 +1001,37 @@
             <p>Experience the pinnacle of premium printing with our exclusive deep blue and silver collection. Meticulously crafted for brands that demand nothing but excellence.</p>
             <div class="hero-buttons">
                 <a href="#categories" class="hero-button primary-button">Explore Collection</a>
-                <a href="#design-studio" class="hero-button secondary-button">Start Designing</a>
+                <a href="#process" class="hero-button secondary-button">Our Process</a>
             </div>
         </div>
         <div class="floating-elements">
             <div class="floating-element"></div>
             <div class="floating-element"></div>
             <div class="floating-element"></div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-number">12,500+</span>
+                    <span class="stat-label">Luxury Projects</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">98%</span>
+                    <span class="stat-label">Client Satisfaction</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">150+</span>
+                    <span class="stat-label">Premium Materials</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">24/7</span>
+                    <span class="stat-label">Concierge Support</span>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -1181,140 +1185,96 @@
         </div>
     </section>
 
-    <!-- Pricing Tiers -->
-    <section class="pricing-tiers" id="pricing">
+    <!-- Gallery Section -->
+    <section class="gallery-section" id="gallery">
         <div class="container">
             <div class="section-header">
-                <h2>Premium Printing Tiers</h2>
-                <p>Select the perfect printing solution for your needs with our transparent, value-driven pricing tiers.</p>
+                <h2>Our Luxury Portfolio</h2>
+                <p>Explore our stunning collection of premium printing projects for luxury brands and discerning clients.</p>
             </div>
-            <div class="pricing-grid">
-                <div class="pricing-card">
-                    <div class="pricing-header">
-                        <h3 class="pricing-name">Essential</h3>
-                        <div class="pricing-price">₹299</div>
-                        <p class="pricing-desc">Perfect for small projects and personal use</p>
+            <div class="gallery-grid">
+                <div class="gallery-item" style="background-image: url('https://images.unsplash.com/photo-1565689228866-1f6b9a6b9c6f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');">
+                    <div class="gallery-overlay">
+                        <h3>Corporate Identity Suite</h3>
+                        <p>Complete branding package for luxury financial firm</p>
                     </div>
-                    <ul class="pricing-features">
-                        <li><i class="fas fa-check"></i> Standard Paper Quality</li>
-                        <li><i class="fas fa-check"></i> Basic Design Templates</li>
-                        <li><i class="fas fa-check"></i> 5-7 Business Days Delivery</li>
-                        <li><i class="fas fa-check"></i> Email Support</li>
-                        <li><i class="fas fa-check"></i> Digital Proof</li>
-                    </ul>
-                    <a href="#" class="cta-button">Select Plan</a>
                 </div>
-                <div class="pricing-card featured">
-                    <div class="pricing-header">
-                        <h3 class="pricing-name">Professional</h3>
-                        <div class="pricing-price">₹899</div>
-                        <p class="pricing-desc">Ideal for small businesses and professionals</p>
+                <div class="gallery-item" style="background-image: url('https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');">
+                    <div class="gallery-overlay">
+                        <h3>Luxury Packaging</h3>
+                        <p>Premium cosmetic brand packaging with foil stamping</p>
                     </div>
-                    <ul class="pricing-features">
-                        <li><i class="fas fa-check"></i> Premium Paper Quality</li>
-                        <li><i class="fas fa-check"></i> Advanced Design Templates</li>
-                        <li><i class="fas fa-check"></i> 3-5 Business Days Delivery</li>
-                        <li><i class="fas fa-check"></i> Priority Phone & Email Support</li>
-                        <li><i class="fas fa-check"></i> Basic Foil Stamping</li>
-                        <li><i class="fas fa-check"></i> Physical Proof</li>
-                    </ul>
-                    <a href="#" class="cta-button">Select Plan</a>
                 </div>
-                <div class="pricing-card">
-                    <div class="pricing-header">
-                        <h3 class="pricing-name">Luxury</h3>
-                        <div class="pricing-price">₹2,499</div>
-                        <p class="pricing-desc">For luxury brands and exclusive events</p>
+                <div class="gallery-item" style="background-image: url('https://images.unsplash.com/photo-1589407423123-9f78d9720385?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');">
+                    <div class="gallery-overlay">
+                        <h3>Wedding Collection</h3>
+                        <p>Complete stationery suite for luxury destination wedding</p>
                     </div>
-                    <ul class="pricing-features">
-                        <li><i class="fas fa-check"></i> Luxury Paper & Materials</li>
-                        <li><i class="fas fa-check"></i> Custom Design Service</li>
-                        <li><i class="fas fa-check"></i> 1-2 Business Days Delivery</li>
-                        <li><i class="fas fa-check"></i> Dedicated Account Manager</li>
-                        <li><i class="fas fa-check"></i> Premium Foil Stamping & Embossing</li>
-                        <li><i class="fas fa-check"></i> White Glove Delivery</li>
-                        <li><i class="fas fa-check"></i> Premium Packaging</li>
-                    </ul>
-                    <a href="#" class="cta-button">Select Plan</a>
+                </div>
+                <div class="gallery-item" style="background-image: url('https://images.unsplash.com/photo-1544966503-eb1a464c55ca?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');">
+                    <div class="gallery-overlay">
+                        <h3>Art Book Collection</h3>
+                        <p>Limited edition art books with specialty binding</p>
+                    </div>
+                </div>
+                <div class="gallery-item" style="background-image: url('https://images.unsplash.com/photo-1551135042-36c93c0365e5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');">
+                    <div class="gallery-overlay">
+                        <h3>Event Invitations</h3>
+                        <p>Luxury gala invitations with intricate die-cutting</p>
+                    </div>
+                </div>
+                <div class="gallery-item" style="background-image: url('https://images.unsplash.com/photo-1588666309990-d68f08e3d4a6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2055&q=80');">
+                    <div class="gallery-overlay">
+                        <h3>Corporate Brochures</h3>
+                        <p>High-end marketing materials for luxury automotive brand</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Design Studio -->
-    <section class="design-studio" id="design-studio">
+    <!-- Process Section -->
+    <section class="process-section" id="process">
         <div class="container">
             <div class="section-header">
-                <h2>AI-Powered Design Studio</h2>
-                <p>Create stunning, professional designs with our intuitive design tools and premium templates powered by artificial intelligence.</p>
+                <h2>Our Artisan Process</h2>
+                <p>Every Printelligence creation undergoes a meticulous 5-step process to ensure unparalleled quality and craftsmanship.</p>
             </div>
-            <div class="studio-container">
-                <div class="studio-toolbar">
-                    <div class="toolbar-section">
-                        <h3>Templates</h3>
-                        <div class="tool-option">
-                            <i class="fas fa-id-card"></i>
-                            <span>Business Cards</span>
-                        </div>
-                        <div class="tool-option">
-                            <i class="fas fa-envelope"></i>
-                            <span>Invitations</span>
-                        </div>
-                        <div class="tool-option">
-                            <i class="fas fa-brochure"></i>
-                            <span>Brochures</span>
-                        </div>
-                        <div class="tool-option">
-                            <i class="fas fa-tags"></i>
-                            <span>Labels & Stickers</span>
-                        </div>
-                    </div>
-                    <div class="toolbar-section">
-                        <h3>Design Tools</h3>
-                        <div class="tool-option">
-                            <i class="fas fa-font"></i>
-                            <span>Text Editor</span>
-                        </div>
-                        <div class="tool-option">
-                            <i class="fas fa-upload"></i>
-                            <span>Image Upload</span>
-                        </div>
-                        <div class="tool-option">
-                            <i class="fas fa-shapes"></i>
-                            <span>Shapes & Icons</span>
-                        </div>
-                        <div class="tool-option">
-                            <i class="fas fa-palette"></i>
-                            <span>Backgrounds</span>
-                        </div>
-                    </div>
-                    <div class="toolbar-section">
-                        <h3>Premium Effects</h3>
-                        <div class="tool-option">
-                            <i class="fas fa-sparkles"></i>
-                            <span>Foil Stamping</span>
-                        </div>
-                        <div class="tool-option">
-                            <i class="fas fa-text-height"></i>
-                            <span>Embossing</span>
-                        </div>
-                        <div class="tool-option">
-                            <i class="fas fa-sun"></i>
-                            <span>Spot UV</span>
-                        </div>
-                        <div class="tool-option">
-                            <i class="fas fa-cut"></i>
-                            <span>Die Cutting</span>
-                        </div>
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Consultation</h3>
+                        <p>Personalized consultation with our design experts to understand your vision and requirements.</p>
                     </div>
                 </div>
-                <div class="studio-preview">
-                    <div class="preview-area">
-                        <p>Drag and drop your design here or choose a template to get started</p>
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Material Selection</h3>
+                        <p>Hand-picking the finest papers, inks, and specialty finishes from our premium collection.</p>
                     </div>
-                    <button class="ai-assist">
-                        <i class="fas fa-magic"></i> AI Design Assistant
-                    </button>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Design & Proofing</h3>
+                        <p>Creating custom designs and providing physical proofs for your approval before production.</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Artisan Production</h3>
+                        <p>Meticulous production using traditional techniques combined with cutting-edge technology.</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h3>White-Glove Delivery</h3>
+                        <p>Careful packaging and expedited delivery with personal concierge service.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1365,6 +1325,15 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Elevate Your Brand?</h2>
+            <p>Experience the Printelligence difference. Contact us today for a personalized consultation and discover how our luxury printing services can transform your brand perception.</p>
+            <a href="#contact" class="hero-button primary-button">Start Your Project</a>
         </div>
     </section>
 
@@ -1443,7 +1412,7 @@
             const addToCartButtons = document.querySelectorAll('.cta-button');
             addToCartButtons.forEach(button => {
                 button.addEventListener('click', function(e) {
-                    if (this.textContent.includes('Explore') || this.textContent.includes('Select Plan') || this.textContent.includes('AI Design')) return;
+                    if (this.textContent.includes('Explore') || this.textContent.includes('Start Your Project') || this.textContent.includes('Our Process')) return;
                     e.preventDefault();
                     updateCartCount();
                     
@@ -1500,7 +1469,7 @@
             });
             
             // Advanced animation on scroll for elements
-            const animatedElements = document.querySelectorAll('.feature-card, .category-card, .product-card, .pricing-card, .testimonial-card');
+            const animatedElements = document.querySelectorAll('.feature-card, .category-card, .product-card, .testimonial-card, .gallery-item');
             
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
@@ -1541,6 +1510,40 @@
                 }
             `;
             document.head.appendChild(style);
+            
+            // Statistics counter animation
+            const statNumbers = document.querySelectorAll('.stat-number');
+            const observerOptions = {
+                threshold: 0.5,
+                rootMargin: '0px 0px -100px 0px'
+            };
+            
+            const statsObserver = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const stat = entry.target;
+                        const target = parseInt(stat.textContent);
+                        let current = 0;
+                        const increment = target / 50;
+                        
+                        const timer = setInterval(() => {
+                            current += increment;
+                            if (current >= target) {
+                                stat.textContent = target + (stat.textContent.includes('+') ? '+' : (stat.textContent.includes('%') ? '%' : ''));
+                                clearInterval(timer);
+                            } else {
+                                stat.textContent = Math.floor(current) + (stat.textContent.includes('+') ? '+' : (stat.textContent.includes('%') ? '%' : ''));
+                            }
+                        }, 30);
+                        
+                        statsObserver.unobserve(stat);
+                    }
+                });
+            }, observerOptions);
+            
+            statNumbers.forEach(stat => {
+                statsObserver.observe(stat);
+            });
         });
     </script>
 </body>
