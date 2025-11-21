@@ -350,6 +350,177 @@
             content: "←";
             margin-right: 5px;
         }
+        
+        /* Gallery Styles */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 60px 0;
+        }
+        
+        .gallery-item {
+            border-radius: 8px;
+            overflow: hidden;
+            position: relative;
+            height: 250px;
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+        
+        /* Process Styles */
+        .process-steps {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            padding: 60px 0;
+        }
+        
+        .process-step {
+            display: flex;
+            align-items: center;
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .step-number {
+            background: #4a6cf7;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: bold;
+            margin-right: 30px;
+            flex-shrink: 0;
+        }
+        
+        .step-content h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+        
+        /* Testimonials Styles */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 60px 0;
+        }
+        
+        .testimonial-card {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        
+        .testimonial-text:before {
+            content: """;
+            font-size: 60px;
+            color: #4a6cf7;
+            opacity: 0.2;
+            position: absolute;
+            top: -20px;
+            left: -10px;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+        
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: #4a6cf7;
+            margin-right: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+        
+        .author-info h4 {
+            margin-bottom: 5px;
+        }
+        
+        .author-info p {
+            color: #666;
+            font-size: 14px;
+        }
+        
+        /* Quote Form Styles */
+        .quote-form {
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            max-width: 800px;
+            margin: 60px auto;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        
+        .form-group textarea {
+            height: 150px;
+            resize: vertical;
+        }
+        
+        .submit-btn {
+            background: #4a6cf7;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        
+        .submit-btn:hover {
+            background: #3a5bd9;
+        }
     </style>
 </head>
 <body>
@@ -362,12 +533,12 @@
                     <ul>
                         <li><a href="index.html">Home</a></li>
                         <li><a href="#collections">Collections</a></li>
-                        <li><a href="#gallery">Gallery</a></li>
-                        <li><a href="#process">Process</a></li>
-                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="process.html">Process</a></li>
+                        <li><a href="testimonials.html">Testimonials</a></li>
                     </ul>
                 </nav>
-                <a href="#quote" class="btn">Get Quote</a>
+                <a href="quote.html" class="btn">Get Quote</a>
             </div>
         </div>
     </header>
@@ -447,9 +618,9 @@
                     <ul>
                         <li><a href="index.html">Home</a></li>
                         <li><a href="#collections">Collections</a></li>
-                        <li><a href="#gallery">Gallery</a></li>
-                        <li><a href="#process">Process</a></li>
-                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="process.html">Process</a></li>
+                        <li><a href="testimonials.html">Testimonials</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
@@ -476,7 +647,7 @@
     </footer>
 
     <script>
-        // Simple JavaScript to handle navigation (in a real site, this would be more sophisticated)
+        // Simple JavaScript to handle navigation
         document.addEventListener('DOMContentLoaded', function() {
             // Check if we're on a collection page
             const path = window.location.pathname;
